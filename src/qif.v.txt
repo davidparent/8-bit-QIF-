@@ -1,0 +1,21 @@
+module QIFNeuron8BitOutput (
+  input clk,             // Clock input
+  input rst,             // Reset input
+  input signed [7:0] I_syn, // Synaptic current input (8-bit signed)
+  output reg signed [7:0] V_mem, // Membrane potential (8-bit signed)
+
+);
+
+  parameter signed [7:0] V_reset = -20; // Reset potential
+  parameter signed [7:0] V_th = 50;   // Threshold potential (Adjust as needed)
+
+  always @(posedge clk or posedge rst) begin
+    if (rst) begin
+      V_mem <= V_reset;
+    end else if (V_mem >= V_th) begin
+      V_mem <= V_reset;
+    end else begin
+      V_mem <= V_mem + I_syn; // Integrate the synaptic current
+    end
+  end
+endmodule
