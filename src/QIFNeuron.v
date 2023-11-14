@@ -8,7 +8,7 @@ module QIFNeuron (
 
   parameter signed [7:0] V_reset = -20; // Reset potential
   parameter signed [7:0] V_th = 50;   // Threshold potential (Adjust as needed)
-  always @(posedge clk or posedge reset) begin
+  always @(posedge clk or posedge rst_n) begin
         if (rst_n) begin
            V_mem <= V_reset;
         end else if (V_mem >= V_th) begin
