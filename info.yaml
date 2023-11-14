@@ -28,7 +28,7 @@ documentation:
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-     QIF https://colab.research.google.com/drive/1aHA74cQap-q5BRpHPSXFtE_xRHbxIbsm?usp=sharing
+     QIF https //colab.research.google.com/drive/1aHA74cQap-q5BRpHPSXFtE_xRHbxIbsm?usp=sharing
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
