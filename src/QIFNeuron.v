@@ -25,4 +25,5 @@ module QIFNeuron (
             B <=1 ;
       
         end
+  end
 endmodule
