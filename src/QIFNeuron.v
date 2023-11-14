@@ -15,11 +15,11 @@ module QIFNeuron (
   reg [7:0] V_reg; // Intermediate register for V
   always @(posedge clk or posedge rst_n) begin
     if (rst_n) begin
-      V_reg<=0
+      V_reg<=0;
     end else if (V_reg >= Vpeak) begin
-      V_reg<=1
+      V_reg<=1;
     end else begin
-      V_reg<=1
+      V_reg<=1;
     end
   end
   // Assign spike_out_reg to spike_out (output wire)
