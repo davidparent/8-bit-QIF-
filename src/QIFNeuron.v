@@ -16,7 +16,7 @@ module QIFNeuron (
   always @(posedge clk or posedge rst_n) begin
     if (rst_n) begin
       V_reg<=0;
-    end else if (V_reg >= Vpeak) begin
+    end else if (V_reg >= 0) begin
       V_reg<=1;
     end else begin
       V_reg<=1;
