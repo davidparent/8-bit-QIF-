@@ -4,13 +4,14 @@ module QIFNeuron (
   input   wire [7:0] I_syn,     // Input B (8-bit, signed)
   output  reg [7:0] V_mem     // Output voltage V (8-bit, signed) 
 );
-   
-  wire  [7:0] V_reset =  -8'sd20; // Reset potential
-  wire  [7:0] V_th = 8'd50;   // Threshold potential (Adjust as needed)
+  reg [7:0] Z1 
+  //wire  [7:0] V_reset =  -8'sd20; // Reset potential
+  //wire  [7:0] V_th = 8'd50;   // Threshold potential (Adjust as needed)
   always @(posedge clk or posedge rst_n) begin
         if (rst_n== 1'b1) 
-           V_mem <= V_reset;
+          Z1 <= 8'd0;
         else
-            V_mem <= V_th;
+          Z1 <= 8'd1;
   end
+  assign V_mem = Z1;
 endmodule
