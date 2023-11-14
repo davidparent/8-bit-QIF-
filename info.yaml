@@ -25,45 +25,48 @@ documentation:
   title:        "8bit QIF"      # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
   description:  "spiking neuron"      # Short description of what your project does
-
-# Longer description of how the project works. You can use standard markdown format.
+# Longer description of how the project works. You can use standard markdown format
   how_it_works: |
-     QIF https //colab.research.google.com/drive/1aHA74cQap-q5BRpHPSXFtE_xRHbxIbsm?usp=sharing
+      This Verilog module simulates a simplified spiking neuron with an 8 bit output voltage. The neuron resets when the voltage exceeds a 
+      threshold, generating a spike. The voltage computaiton includes a gain factor and a quadratic term.
+      The spike_out signal indicates the occurance of a spike, and the output voltage is exposed through the V output.
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-  Set   b between 4 and 10, srts clock, activate reset and pointor output
+      Apply clock pulses and input values to observe the oupout voltage and the spike generation
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
-    - compare bit 11
-    - compare bit 12
-    - compare bit 13
-    - compare bit 14
-    - compare bit 15
-    - compare bit 16
-    - compare bit 17
-    - compare bit 18
+   - B
+   - B
+   - B
+   - B
+   - B
+   - B
+   - B
+   - B
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - segment a
-    - segment b
-    - segment c
-    - segment d
-    - segment e
-    - segment f
-    - segment g
-    - dot
+   - V 
+   - spike out
+   - V
+   - spike out
+   - V
+   - spike out
+   - V
+   - spike out
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - second counter bit 0
-    - second counter bit 1
-    - second counter bit 2
-    - second counter bit 3
-    - second counter bit 4
-    - second counter bit 5
-    - second counter bit 6
-    - second counter bit 7
+  - spike output
+  - spike output
+  - spike output
+  - spike output
+  - spike output
+  - spike output
+  - spike output
+  - spike output
+   
+
 
 # The following fields are optional
   tag:          "timer, test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
