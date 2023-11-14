@@ -19,12 +19,6 @@ module tt_um_QIF_8bit #( parameter MAX_COUNT = 24'd10_000_000 ) (
        .I_syn(ui_in),
        .V_mem(uo_out))
      );
-    QIFNeuron neuron (
-       .clk(clk),
-       .rst_n(rst_n),
-       .B(ui_in),
-       .V(uo_out),
-       .spike_out(uio_out[0])
-     );
+
 
 endmodule
