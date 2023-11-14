@@ -24,16 +24,15 @@ documentation:
   author:       "David Parent"      # Your name
   title:        "8bit QIF"      # Project title
   language:     "Verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  description:  "spiking nueron"      # Short description of what your project does
+  description:  "spiking neuron"      # Short description of what your project does
 
 # Longer description of how the project works. You can use standard markdown format.
   how_it_works: |
-     QIF
+     QIF https://colab.research.google.com/drive/1aHA74cQap-q5BRpHPSXFtE_xRHbxIbsm?usp=sharing
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      After reset, the counter should increase by one every second with a 10MHz input clock.
-      Experiment by changing the inputs to change the counting speed.
+  Set   b between 4 and 10, srts clock, activate reset and pointor output
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:               
