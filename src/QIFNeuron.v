@@ -8,10 +8,10 @@ module QIFNeuron (
   //wire  [7:0] V_reset =  -8'sd20; // Reset potential
   //wire  [7:0] V_th = 8'd50;   // Threshold potential (Adjust as needed)
   always @(posedge clk or posedge rst_n) begin
-        if (rst_n== 1'b1) 
-          Z1 <= 8'd0;
+        if (rst_n) 
+          Z1 <= 0;
         else
-          Z1 <= 8'd1;
+          Z1 <= I_syn;
   end
   assign V_mem = Z1;
 endmodule
