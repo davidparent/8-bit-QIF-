@@ -16,7 +16,7 @@ module QIFNeuron (
     if (rst_n) begin
       V_mem <= 0;
     end else begin
-      V_mem<=I_syn
+      V_mem<=I_syn;
     end
   
 
