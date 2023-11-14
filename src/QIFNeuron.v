@@ -6,7 +6,7 @@ module QIFNeuron (
 );
   reg [7:0] V;
   reg [7:0] B;
-  wire reset = ! rst_n;
+  //wire reset = ! rst_n;
    //reg [7:0] Z1, Z2;        // Delay flip-flops
   //wire [7:0] V_reset = -8'sd20; // Set Vreset to -20
   //wire [7:0] Vpeak = 8'd50;  // Vpeak value (Set to 50)
@@ -16,13 +16,13 @@ module QIFNeuron (
   
   always @(posedge clk) begin
         // if reset, set counter to 0
-      if (reset) begin
+      if (rst_n) begin
             V <= 0;
-            B <=0 ;
+            //B <=0 ;
      
         end else begin
-            V <= 1;
-            B <=1 ;
+            V <= I_syn;
+            //B <=1 ;
       
         end
   end
